@@ -6,13 +6,10 @@ function timeFormat() {
 }
 
 function convertTime(s) {
-  var h, m, s;
-  m = Math.floor(s / 60);
-  h = Math.floor(m / 60);
-  s = s % 60;
-  m = m % 60;
-  h = h % 24;
-  return { h: h, m: m, s: s.toFixed(0) };
+  var h = Math.floor(s / 3600);
+  var m = Math.floor(s % 3600 / 60);
+  var s = Math.floor(s % 3600 % 60);
+  return { h: h, m: m, s: s};
 };
 
 exports.print = timeFormat;
