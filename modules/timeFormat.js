@@ -5,10 +5,10 @@ function timeFormat() {
   console.log('Uptime: ~', convertTime(uptime));
 }
 
-function convertTime(s) {
-  var h = Math.floor(s / 3600);
-  var m = Math.floor(s % 3600 / 60);
-  var s = Math.floor(s % 3600 % 60);
+function convertTime(ms) {
+  var h = Math.floor(ms / 3600);
+  var m = Math.floor(ms % 3600 / 60);
+  var s = Math.floor(ms % 3600 % 60);
   return { h: h, m: m, s: s};
 };
 
